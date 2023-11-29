@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+
+<!--  <meta name="viewport" content="width=device-width,initial-scale=1">   **From Mitch -->
+  <script src="https://kit.fontawesome.com/8f955d604c.js" crossorigin="anonymous"></script>
+  <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+    }
+    .container {
+        display: flex;
+        height: 100vh;
+    }
+    .left-column {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('your-image-url.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .left-column img {
+        width: 300px;
+    }
+    .contact-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #007bff;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        border: none;
+    }
+    .right-column {
+        background: #fff;
+        width: 50%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-section {
+        max-width: 400px;
+        text-align: center;
+    }
+    .about-section h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    .about-section p {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+    .button {
+        display: block;
+        padding: 10px;
+        background: #007bff;
+        margin: 0 auto; 
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 20px;
+        width: fit-content;
+        align-self: center;
+    }
+</style>
+</head>
+
+<body>
+
+  <div id="container">
+     <nav>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home" style="color: black;"></i></a></li>
+          <li><a href="aboutme.html">About me</a></li>
+          <li class="dropdown">
+            <a href="DebbyPortfolio.html" class="dropbtn">Portfolio <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+              <!--        <a href="debby.html">Debby</a> -->
+              <a href="lucas.html">Lucas</a>
+              <a href="SallyPortfolio.html">Portfolio2</a>
+          </div>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>  <!-- mailto:bhw04@mail.aub.edu -->
+
+  </ul>
+</nav>
+
+
+<main>
+    <div class="welcome-container">
+      <div class="welcome-text">
+
+<body>
+<img src="images/marahbefore.jpeg" alt="BrokenImage" width="200" height="200">
+<h1>Contact</h1>
+<p> We're thrilled that you're interested in connecting with us. Whether you have a burning question, a collaboration idea, or just want to say hello, we're here and ready to chat. Feel free to reach out using the form below, and we'll get back to you as soon as possible. Your feedback and inquiries are important to us, and we look forward to the opportunity to engage with you. Thank you for considering us, and we can't wait to hear from you!</p>
+
+<form onsubmit="return validateForm()">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email">
+  <div></div>
+  <textarea id="message" name="message" rows="4" cols="50"></textarea>
+  <div></div>
+   <input type="submit" value="Submit">
+</form>
+<p id="result" style="color: white;" >test</p>
+
+<script>
+function validateForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+
+  if (name === "" || email === "" || message === "") {
+    document.getElementById("result").innerHTML = "<span style='color: red;'>Please make sure to input information </span>";
+    return false;
+  } else {
+    document.getElementById("result").innerHTML = " <span style='color: green;'Form submitted successfully! </span>";
+    alert("Thanks for your submission!")
+    return true;
+  }
+}
+	
+</script>
+
+</body>
+</div></div></main>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio Admin Panel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/8f955d604c.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .centered-div {
+    border: 3px solid #f1f1f1;
+    padding: 10px;
+  }
+</style>
+
+<body>
+
+
+
+  <div class = "centered-div" id = "Directory">
+    <form action="delButton()" border = "1">
+      <input type="checkbox" id="page1" name="page1" value="Home">
+      <label for="page1"> Home</label><br>
+      <input type="checkbox" id="page2" name="page2" value="AboutMe">
+      <label for="page2"> About</label><br>
+      <input type="checkbox" id="page3" name="page3" value="Collections">
+      <label for="page3"> Collections</label><br>
+      <input type="checkbox" id="page4" name="page4" value="Contact">
+      <label for="page1"> Contact</label><br>
+      <input type="checkbox" id="page5" name="page5" value="Portfolio">
+      <label for="page2"> Portfolio</label><br>
+      <input type="checkbox" id="page6" name="page6" value="Portfolio2">
+      <label for="page3"> Portfolio2</label><br><br>
+      <button type="submit" class="btnDel" onclick="DelButton()">Delete</button>
+      <button type="button" class="btnUp" onclick="DelButton()">Upload</button>
+   <!--   <input type="button" value="Delete" onclick="">
+      <input type="button" Value="Upload">
+    -->
+  </form>
+  <p id = "buttonMessage"></p>
+  </div>
+</div>
+
+  var dir = document.querySelector("#directory");
+// Get the current URL
+  var currentUrl = window.location.href;
+
+// Extract the directory path from the URL
+  var directoryPath = currentUrl.substring(0, currentUrl.lastIndexOf("/"));
+
+// Print the directory path
+  dir.textContent = directoryPath;
+//alert (directoryPath);
+
+</body>
+<script>
+
+  function DelButton(){
+    alert("notnow");
+  }
+
+
+
+</script>
+</html>

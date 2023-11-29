@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/8f955d604c.js" crossorigin="anonymous"></script>
+  <style> {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  /*position: fixed;*/
+  bottom: 23px; /************locks button on page bottom? **************/
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  /*position: fixed; */
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+} 
+
+.footerDiv { /*this sets the position of the Button/popup Menu */
+    position: absolute; 
+    bottom: 0; 
+    right:0; 
+    
+}
+
+</style>
+</head>
+
+<body>
+  <p id = "directory">
+  </p>
+
+<footer>
+
+  <div class = "footerDiv">
+    <!-- A button to open the popup form -->
+    <button class="open-button" id="open-button" onclick="openForm()">Admin Login</button>
+
+    <!-- The form -->
+    <div class="form-popup" id="myForm">
+      <form action= "JavaScript:passwordCheck()" class="form-container">
+        <h1>Admin Login</h1>
+
+        <label for="psw"><b>Password</b></label>
+        <input id="psw" type="password" placeholder="Enter Password" name="psw" autocomplete="new-password" required >
+        <div id = pwMessage></div>
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+      </form>
+      
+    </div> 
+  </div>
+</footer>
+
+</body>
+<script type="text/javascript">
+
+  var dir = document.querySelector("#directory");
+// Get the current URL
+  var currentUrl = window.location.href;
+
+// Extract the directory path from the URL
+  var directoryPath = currentUrl.substring(0, currentUrl.lastIndexOf("/"));
+
+// Print the directory path
+  dir.textContent = directoryPath;
+//alert (directoryPath);
+
+  var pwd = document.querySelector("#psw");
+  var pswMsg = document.querySelector("#pwMessage");
+
+  function openForm() {
+    pswMsg.textContent = "";
+    document.getElementById("open-button").style.display = "none";
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    document.getElementById("open-button").style.display = "block";
+  } 
+
+  function passwordCheck(){
+    var pass = document.querySelector("#psw");
+    var authPass = "password"
+// ********* It is never good to store a password in plain text on the front end ********
+
+    if (pass.value == authPass){
+    location.href = "adminpanelview.html";
+      pswMsg.textContent = "correct!";
+    }
+    else
+    {
+      closeForm(); //close and open to reset the form
+      openForm();
+      pswMsg.style.color = "red";
+      pswMsg.style.fontSize = "small";
+      pswMsg.textContent = "Incorrect password, try again";
+    }
+
+
+  }
+
+</script>
+</html>

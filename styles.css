@@ -1,0 +1,308 @@
+body {
+  color: black;
+  line-height: 150%;
+  font-family: Georgia;
+}
+
+h1 {
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+  border: 2px solid #ffffff;
+  background-color: white; margin-top:20px
+}
+
+nav a {
+  font-size: large;
+  text-decoration: none;
+  font-weight: bold;
+  color: black; 
+}
+
+p {
+  text-indent: 30pt;
+  text-align: justify;
+}
+
+/* BALSAM FOOTER
+footer p {
+  text-align: center;
+  font-size: small;
+} */
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #45a1ff;
+  color: #fff;
+  clear: both;
+}
+
+#container {
+  width: 90%;
+  margin: auto;
+  background-color: #FAFAFA
+  padding: 10px;
+}
+#containerFoot {
+  width: 90%;
+  margin: auto;
+  background-color: #FAFAFA
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  display: inline;
+  margin-right: 50px;
+  padding: 10px;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+i.fas.fa-home {
+  margin-right: 5px;
+  font-size: 35px;
+}
+
+header {
+  background-size: 100% 100%;
+  padding-top: 25px;
+  padding-bottom: 150px;
+  background-repeat: no-repeat;
+}
+
+img {
+  float: right;
+}
+
+.middle {
+  left: 1px;
+  top: 285px;
+  width: 1313.33px;
+  height: 738.75;
+}
+
+.paragraph {
+  float: left;
+  width: calc(33.33% - 40px);
+  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.welcome-text {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.welcome-text h1 {
+  color: black; 
+}
+
+.welcome-text p {
+  color: #666;
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.image-container {
+  flex: 1;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  flex: 1;
+  text-align: center;
+}
+
+.paragraph h2 i {
+  margin-right: 5px;
+  font-size: 20px;
+  color: #3498db;
+}
+
+.welcome-container {
+  display: flex;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+#search-bar {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.search-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 700px;
+  box-sizing: border-box;
+  margin-left: 250px;
+}
+
+button {
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/*James additions *********/
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: relative;
+  /*bottom: 23px; /************locks button on page bottom? **************
+  right: 28px;
+  width: 280px; */
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed; 
+  bottom: 0; 
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus change colour */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+} 
+
+.footerDiv { /*this sets the position of the Button/popup Menu */
+    position: relative; 
+    bottom: 0; 
+    right:0; 
+    
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer li {
+  display: inline;
+  margin-right: 50px;
+  padding: 10px;
+}
+
+footer li:first-child {
+  margin-right: auto;
+}
+
+	

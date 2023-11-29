@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AboutMe</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/8f955d604c.js" crossorigin="anonymous"></script>
+  <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+    }
+    .container {
+        display: flex;
+        height: 100vh;
+    }
+    .left-column {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('your-image-url.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .left-column img {
+        width: 300px;
+    }
+    .contact-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #007bff;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        border: none;
+    }
+    .right-column {
+        background: #fff;
+        width: 50%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-section {
+        max-width: 400px;
+        text-align: center;
+    }
+    .about-section h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    .about-section p {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+    .button {
+        display: block;
+        padding: 10px;
+        background: #007bff;
+        margin: 0 auto; 
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 20px;
+        width: fit-content;
+        align-self: center;
+    }
+</style>
+</head>
+
+<body>
+
+  <div id="container">
+     <nav>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home" style="color: black;"></i></a></li>
+          <li><a href="aboutme.html">About me</a></li>
+          <li class="dropdown">
+            <a href="DebbyPortfolio.html" class="dropbtn">Portfolio <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+              <!--        <a href="debby.html">Debby</a> -->
+              <a href="lucas.html">Lucas</a>
+              <a href="SallyPortfolio.html">Portfolio2</a>
+          </div>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>  <!-- mailto:bhw04@mail.aub.edu -->
+
+  </ul>
+</nav>
+
+
+<main>
+    <div class="welcome-container">
+      <div class="welcome-text">
+
+
+ 
+        <div class="container">
+          <div class="left-column">
+            <img src="images/marahbefore.jpeg" alt="marahbefore" onmouseover="changeImage(this, 'images/marahafter.jpeg')" onmouseout="changeImage(this, 'images/marahbefore.jpeg')">
+            <a href="#" class="contact-button">Contact</a>
+        </div>
+        <div class="right-column">
+            <div class="about-section">
+              <h2>About Me</h2>
+              <p>Greetings! I'm a passionate student exploring diverse realms of creativity, driven by a profound curiosity and a love for the arts. My journey involves transcending conventional boundaries, spanning visual arts, writing, and design. In this ever-evolving landscape, I'm committed to continuous learning and growth. My portfolio reflects not just technical skills but a unique essence infused into each creation. Join me on this odyssey of creativity, where every stroke, word, and design unravels infinite artistic possibilities.</p>
+              <a href="https://drive.google.com/file/d/1kIOA7_yWRdZStZuq0qZPUsIU4tt4SMrN/view?usp=sharing" class="button" View>View CV</a>
+          </div>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+    function changeImage(element, newImage) {
+      element.src = newImage;
+  }
+
+</script>
+
+</body>
+</html>

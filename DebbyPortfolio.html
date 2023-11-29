@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+<script src="https://kit.fontawesome.com/8f955d604c.js" crossorigin="anonymous"></script>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+  }
+  .home-icon {
+    margin-right: 20px;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar li {
+    position: relative;
+  }
+  .navbar a, .navbar a:visited {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .navbar li:hover .dropdown-content {
+    display: block;
+  }
+  .content {
+    padding: 50px;
+    background: linear-gradient(to right, #f0f0f0, #fff);
+  }
+  .header {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .text {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+   .collections {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+  }
+
+  .collection {
+    width: 45%; 
+    position: relative;
+  }
+
+  .collection img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+  }
+
+  .collection-info {
+    position: center;
+    bottom: -30px;
+    left: 10px;
+    color: black
+    font-size: 40px;
+    background: rgba(0, 0, 0, 0.0);
+    padding: 5px 10px;
+  }
+  .collection img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.5s ease; 
+  }
+
+  .grayscale {
+    filter: grayscale(100%);
+  }
+</style>
+</head>
+<body>
+
+<!--
+<div class="navbar">
+ 
+  <ul>
+     <a href="/" class="home-link">Home</a>
+    <li>
+    <li><a href="#about">About</a></li>
+    <li>
+      <a href="#portfolio">Portfolio</a>
+      <div class="dropdown-content">
+        <a href="#collection1">Collection 1</a>
+        <a href="#collection2">Collection 2</a>
+      </div>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+-->
+ <div id="container">
+   <nav>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home" style="color: black;"></i></a></li>
+      <li><a href="aboutme.html">About me</a></li>
+      <li class="dropdown">
+        <a href="DebbyPortfolio.html" class="dropbtn">Portfolio <i class="fas fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <!--        <a href="debby.html">Debby</a> -->
+          <a href="lucas.html">Lucas</a>
+          <a href="SallyPortfolio.html">Portfolio2</a>
+        </div>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>  <!-- mailto:bhw04@mail.aub.edu -->
+
+    </ul>
+  </nav>
+
+  <main>
+    <div class="welcome-container">
+      <div class="welcome-text">
+<div class="content">
+  <h1 class="header">PORTFOLIO</h1>
+  <p class="text">
+    Take a look through my two most recent projects. These projects are near and dear to my heart, and I am excited to have captured the essence of my subjects in these collections. I focus on lifestyle, capturing the essence of reality in each stroke. Both collections are a testament to my artistic journey, highlighting my commitment to portraying the world as I see it with honesty and clarity.
+  </p>
+
+<div class="collections">
+  <div class="collection" id="collection1">
+    <img src="dean.png" alt="Collection 1 Image">
+    <div class="collection-info">Collection One</div>
+  </div>
+  <div class="collection" id="collection2">
+    <img src="ari.png" alt="Collection 2 Image">
+    <div class="collection-info">Collection Two</div>
+  </div>
+</div>
+</div></div></Main>
+
+<script>
+  function makeGray(event) {
+    event.target.classList.add('grayscale');
+  }
+
+  function removeGray(event) {
+    event.target.classList.remove('grayscale');
+  }
+
+  window.onload = function() {
+    var images = document.querySelectorAll('.collection img');
+    images.forEach(function(img) {
+      img.addEventListener('mouseover', makeGray);
+      img.addEventListener('mouseout', removeGray);
+    });
+  }
+</script>
