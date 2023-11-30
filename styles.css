@@ -36,7 +36,7 @@ footer {
   display: flex;
   justify-content: center;
   padding: 5px;
-  background-color: blue
+  background-color: #2b9ca2;
   color: #fff;
   clear: both;
 }
@@ -44,13 +44,13 @@ footer {
 #container {
   width: 90%;
   margin: auto;
-  background-color: #FAFAFA
+  background-color: #FAFAFA;
   padding: 10px;
 }
 #containerFoot {
   width: 90%;
   margin: auto;
-  background-color: #FAFAFA
+  background-color: #FAFAFA;
   padding: 10px;
 }
 
