@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-<script src="https://kit.fontawesome.com/8f955d604c.js" crossorigin="anonymous"></script>
-<style>
+  <script src="https://kit.fontawesome.com/8f955d604c.js" crossorigin="anonymous"></script>
+ <!--<style>
+ 
   body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -104,11 +105,14 @@
   .grayscale {
     filter: grayscale(100%);
   }
-</style>
+
+</style> 
+-->
+
 </head>
 <body>
 
-<!--
+<!-- Debby's Nav bar
 <div class="navbar">
  
   <ul>
@@ -126,8 +130,9 @@
   </ul>
 </div>
 -->
- <div id="container">
-   <nav>
+
+<div id="container">
+  <nav>
     <ul>
       <li><a href="index.html"><i class="fas fa-home" style="color: black;"></i></a></li>
       <li><a href="aboutme.html">About me</a></li>
@@ -135,8 +140,8 @@
         <a href="DebbyPortfolio.html" class="dropbtn">Portfolio <i class="fas fa-caret-down"></i></a>
         <div class="dropdown-content">
           <!--        <a href="debby.html">Debby</a> -->
-          <a href="lucas.html">Lucas</a>
-          <a href="SallyPortfolio.html">Portfolio2</a>
+          <a href="lucas.html">Collection 1</a>
+          <a href="SallyPortfolio.html">Collection 2</a>
         </div>
       </li>
       <li><a href="contact.html">Contact Us</a></li>  <!-- mailto:bhw04@mail.aub.edu -->
@@ -144,26 +149,33 @@
     </ul>
   </nav>
 
-  <main>
+ 
     <div class="welcome-container">
       <div class="welcome-text">
-<div class="content">
-  <h1 class="header">PORTFOLIO</h1>
-  <p class="text">
-    Take a look through my two most recent projects. These projects are near and dear to my heart, and I am excited to have captured the essence of my subjects in these collections. I focus on lifestyle, capturing the essence of reality in each stroke. Both collections are a testament to my artistic journey, highlighting my commitment to portraying the world as I see it with honesty and clarity.
-  </p>
+        <div class="content">
+          <h1 class="header">PORTFOLIO</h1>
+          <p class="text">
+            Take a look through my two most recent projects. These projects are near and dear to my heart, and I am excited to have captured the essence of my subjects in these collections. I focus on lifestyle, capturing the essence of reality in each stroke. Both collections are a testament to my artistic journey, highlighting my commitment to portraying the world as I see it with honesty and clarity.
+          </p>
 
-<div class="collections">
-  <div class="collection" id="collection1">
-    <img src="dean.png" alt="Collection 1 Image">
-    <div class="collection-info">Collection One</div>
-  </div>
-  <div class="collection" id="collection2">
-    <img src="ari.png" alt="Collection 2 Image">
-    <div class="collection-info">Collection Two</div>
-  </div>
+          <div class="collections">
+            <div class="collection" id="collection1">
+              <img src="images/dean.png" alt="Collection 1 Image">
+              <div class="collection-info">Collection One
+              </div>
+            </div>
+            <div class="collection" id="collection2">
+              <img src="images/ari.png" alt="Collection 2 Image">
+              <div class="collection-info">Collection Two
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </div>
-</div></div></Main>
+
 
 <script>
   function makeGray(event) {
@@ -182,3 +194,76 @@
     });
   }
 </script>
+
+
+<!--</footer>-------------------->
+
+<div >
+  <footer>
+    <ul>
+      <li>Copyright 2023 - Deb, Balsam, Sally, Mitch, Marah, James</li>
+      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+      <li>
+        <div class = "footerDiv">
+          <!-- A button to open the popup form -->
+          <button class="open-button" id="open-button" onclick="openForm()">Admin Login</button>
+
+          <!-- The form -->
+          <div class="form-popup" id="myForm">
+            <form action= "JavaScript:passwordCheck()" class="form-container">
+              <h1>Admin Login</h1>
+
+              <label for="psw"><b>Password</b></label>
+              <input id="psw" type="password" placeholder="Enter Password" name="psw" autocomplete="new-password" required >
+              <div id = pwMessage></div>
+              <button type="submit" class="btn">Login</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+
+          </div> 
+        </div>
+      </li>
+    </ul>
+  </footer>
+</div>
+<script src="script.js"></script>
+</div>
+
+
+<script type="text/javascript">
+  var pwd = document.querySelector("#psw");
+  var pswMsg = document.querySelector("#pwMessage");
+
+  function openForm() {
+    pswMsg.textContent = "";
+    document.getElementById("open-button").style.display = "none";
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    document.getElementById("open-button").style.display = "block";
+  } 
+
+  function passwordCheck(){
+    var pass = document.querySelector("#psw");
+    var authPass = "password"
+// ********* It is never good to store a password in plain text on the front end ********
+
+    if (pass.value == authPass){
+      location.href = "adminpanelview.html";
+      pswMsg.textContent = "correct!";
+    }
+    else
+    {
+      closeForm(); //close and open to reset the form
+      openForm();
+      pswMsg.style.color = "red";
+      pswMsg.style.fontSize = "small";
+      pswMsg.textContent = "Incorrect password, try again";
+    }
+  }
+
+</script>
+</body>
+</html>
